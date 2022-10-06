@@ -47,7 +47,7 @@ const Login: NextPage = () => {
   return (
     <Flex py={20} minH={"100vh"} justify={"center"} bg={"gray.100"}>
       <Stack spacing={8} mx={"auto"} maxW={"2xl"} py={12} px={6}>
-        <Stack align={"center"}>
+        <Stack align={"center"} textAlign={"center"}>
           <Heading fontSize={"4xl"}>Sign in to your account</Heading>
           <Text fontSize={"lg"} color={"gray.600"} textAlign="center">
             No passwords required. We{`'`}ll send you a magic link to login
@@ -88,7 +88,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   if (user) {
     return {
       redirect: {
-        destination: "/dashboard",
+        destination: "/",
         permanent: false,
       },
     };
